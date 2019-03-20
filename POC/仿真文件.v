@@ -1,6 +1,5 @@
 `timescale 1ns / 1ps
 
-//需要将vga.v里的两个延时计数改为d5
 module test; //声明test名称
   reg CLK;
   reg func;
@@ -44,6 +43,6 @@ module test; //声明test名称
     func = 1'b1;
     #200
     func = 1'b0;
-    #1000 $stop;
+    #200 $stop;
   end
 endmodule
