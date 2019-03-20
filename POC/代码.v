@@ -82,7 +82,7 @@ module POC(
     );
     reg[1:0] flag = 2'b00;
     reg[7:0] BR = 8'b00000000; //Buffer Register
-    reg[7:0] SR = 8'b00000000;//Status Register  
+    reg[7:0] SR = 8'b10000000;//Status Register  
     //SR7--Ready flag bit
     //SR0--interrupt bit
     //SR6-SR1--empty
@@ -250,7 +250,7 @@ module POC(
           IRQ = 1;
           Dout = 8'b00000000;
           BR = 8'b00000000;
-          SR = 8'b00000000;
+          SR = 8'b10000000;
         end
 endmodule
 
