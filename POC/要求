@@ -1,0 +1,9 @@
+采用单地址的指令集结构。
+
+指令字包括两部分：操作码（OPCODE），用来定义指令的功能
+
+地址段(Address Part), 用来存放要被操作的指令的地址。
+
+称之为直接寻址（Direct Addressing）。
+
+在一些少量的指令中，地址段就是操作数，这是立即数寻址（Immediate Addressing）。
