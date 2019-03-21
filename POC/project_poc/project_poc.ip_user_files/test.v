@@ -1,14 +1,14 @@
 `timescale 1ns / 1ps
 
-//éœ€è¦å°†vga.vé‡Œçš„ä¸¤ä¸ªå»¶æ—¶è®¡æ•°æ”¹ä¸ºd5
-module test; //å£°æ˜teståç§°
+//ĞèÒª½«vga.vÀïµÄÁ½¸öÑÓÊ±¼ÆÊı¸ÄÎªd5
+module test; //ÉùÃ÷testÃû³Æ
   reg CLK;
   reg func;
-  reg RSTn; //ä¿¡å·å£°æ˜
+  reg RSTn; //ĞÅºÅÉùÃ÷
   reg [7:0]data_input;
   reg Switch;
   wire [7:0]data;
-  //ä¸‹é¢çš„shift_regè®¾è®¡çš„å®ä¾‹åŒ–
+  //ÏÂÃæµÄshift_regÉè¼ÆµÄÊµÀı»¯
   top dut(
   .CLK (CLK), 
   .func (func),
@@ -17,15 +17,15 @@ module test; //å£°æ˜teståç§°
   .Switch (Switch),
   .data(data));
 
-  //æ­¤è¿›ç¨‹å—è®¾ç½®è‡ªç”±è¿è¡Œæ—¶é’Ÿ
+  //´Ë½ø³Ì¿éÉèÖÃ×ÔÓÉÔËĞĞÊ±ÖÓ
   initial begin
   CLK = 0;
   forever #1 CLK = ~CLK;
   end
   initial 
-  begin//æ­¤è¿‡ç¨‹å—æŒ‡å®šåˆºæ¿€ã€‚
+  begin//´Ë¹ı³Ì¿éÖ¸¶¨´Ì¼¤¡£
     RSTn = 0;
-    Switch = 1'b0;//æŸ¥è¯¢æ–¹å¼
+    Switch = 1'b0;//²éÑ¯·½Ê½
     #200
     RSTn = 1;
     data_input = 8'b11110000;
@@ -38,14 +38,14 @@ module test; //å£°æ˜teståç§°
     #200
     func = 1'b0;
     #200
-    Switch = 1'b1;//ä¸­æ–­æ–¹å¼
+    Switch = 1'b1;//ÖĞ¶Ï·½Ê½
     #200
     data_input = 8'b01101111;
     func = 1'b1;
     #200
     func = 1'b0;
     #200
-    Switch = 1'b0;//æŸ¥è¯¢æ–¹å¼
+    Switch = 1'b0;//²éÑ¯·½Ê½
     #200
     RSTn = 1;
     data_input = 8'b11110000;
