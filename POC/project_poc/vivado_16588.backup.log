@@ -1,0 +1,247 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Mar 21 12:22:59 2019
+# Process ID: 16588
+# Current directory: C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10212 C:\Users\11918\OneDrive\COA\COA2_FPGA\POC\project_poc\project_poc.xpr
+# Log file: C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/vivado.log
+# Journal file: C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.xpr
+INFO: [Project 1-313] Project file moved from 'E:/FPGA/project_poc' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 745.289 ; gain = 19.680
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor
+INFO: [VRFC 10-311] analyzing module POC
+INFO: [VRFC 10-311] analyzing module printer
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto e12afee0f9d7457f8b309b3f87a03462 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" Line 304. Module top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" Line 1. Module Processor doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" Line 70. Module POC doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" Line 265. Module printer doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Processor
+Compiling module xil_defaultlib.POC
+Compiling module xil_defaultlib.printer
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 778.594 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_behav -key {Behavioral:sim_1:Functional:test} -tclbatch {test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 792.223 ; gain = 13.629
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+add_wave {{/test/dut/U1/IRQ}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+add_wave {{/test/dut/U1/SR[7]}} 
+add_wave {{/test/dut/U1/SR[0]}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor
+INFO: [VRFC 10-311] analyzing module POC
+INFO: [VRFC 10-311] analyzing module printer
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto e12afee0f9d7457f8b309b3f87a03462 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" Line 306. Module top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" Line 1. Module Processor doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" Line 70. Module POC doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" Line 267. Module printer doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Processor
+Compiling module xil_defaultlib.POC
+Compiling module xil_defaultlib.printer
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_behav -key {Behavioral:sim_1:Functional:test} -tclbatch {test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 813.676 ; gain = 6.090
+run 10 us
+add_wave {{/test/dut/U1/IRQ}} 
+add_wave {{/test/dut/U1/SR[7]}} 
+add_wave {{/test/dut/U1/SR[0]}} 
+run 10 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+reset_project
+save_wave_config {C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg
+set_property xsim.view C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_project
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor
+INFO: [VRFC 10-311] analyzing module POC
+INFO: [VRFC 10-311] analyzing module printer
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto e12afee0f9d7457f8b309b3f87a03462 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" Line 306. Module top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" Line 1. Module Processor doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" Line 70. Module POC doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" Line 267. Module printer doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Processor
+Compiling module xil_defaultlib.POC
+Compiling module xil_defaultlib.printer
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_behav -key {Behavioral:sim_1:Functional:test} -tclbatch {test.tcl} -view {C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg
+source test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 821.934 ; gain = 1.023
+run 10 us
+add_wave {{/test/Switch}} 
+save_wave_config {C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg}
+save_wave_config {C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg}
+reset_project
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 21 12:49:30 2019...

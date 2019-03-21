@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Mar 21 12:22:59 2019
+# Process ID: 16588
+# Current directory: C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10212 C:\Users\11918\OneDrive\COA\COA2_FPGA\POC\project_poc\project_poc.xpr
+# Log file: C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/vivado.log
+# Journal file: C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source test.tcl
+restart
+run 10 us
+add_wave {{/test/dut/U1/IRQ}} 
+restart
+run 10 us
+add_wave {{/test/dut/U1/SR[7]}} 
+add_wave {{/test/dut/U1/SR[0]}} 
+restart
+run 10 us
+close_sim
+launch_simulation
+source test.tcl
+run 10 us
+add_wave {{/test/dut/U1/IRQ}} 
+add_wave {{/test/dut/U1/SR[7]}} 
+add_wave {{/test/dut/U1/SR[0]}} 
+run 10 us
+restart
+run 10 us
+reset_project
+save_wave_config {C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg
+set_property xsim.view C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg [get_filesets sim_1]
+close_sim
+reset_project
+launch_simulation
+open_wave_config C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg
+source test.tcl
+run 10 us
+add_wave {{/test/Switch}} 
+save_wave_config {C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg}
+save_wave_config {C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test_behav.wcfg}
+reset_project
+close_sim
+reset_project

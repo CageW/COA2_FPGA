@@ -1,0 +1,432 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8216 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 336.148 ; gain = 101.063
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:306]
+INFO: [Synth 8-638] synthesizing module 'Processor' [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:1]
+WARNING: [Synth 8-5788] Register Din_reg in module Processor is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:19]
+WARNING: [Synth 8-5788] Register ADDR_reg in module Processor is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:28]
+WARNING: [Synth 8-5788] Register RW_reg in module Processor is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:29]
+INFO: [Synth 8-256] done synthesizing module 'Processor' (1#1) [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:1]
+INFO: [Synth 8-638] synthesizing module 'POC' [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:70]
+WARNING: [Synth 8-5788] Register IRQ_reg in module POC is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:94]
+WARNING: [Synth 8-5788] Register IRQ_reg in module POC is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:107]
+WARNING: [Synth 8-5788] Register BR_reg in module POC is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:113]
+WARNING: [Synth 8-5788] Register PD_reg in module POC is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:145]
+WARNING: [Synth 8-5788] Register flag_reg in module POC is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:155]
+WARNING: [Synth 8-5788] Register TR_reg in module POC is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:167]
+INFO: [Synth 8-256] done synthesizing module 'POC' (2#1) [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:70]
+INFO: [Synth 8-638] synthesizing module 'printer' [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:267]
+WARNING: [Synth 8-5788] Register flag_printer_reg in module printer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:281]
+WARNING: [Synth 8-5788] Register RDY_reg in module printer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:282]
+WARNING: [Synth 8-5788] Register data_reg in module printer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:286]
+INFO: [Synth 8-256] done synthesizing module 'printer' (3#1) [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:267]
+INFO: [Synth 8-256] done synthesizing module 'top' (4#1) [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:306]
+WARNING: [Synth 8-3331] design Processor has unconnected port Dout[6]
+WARNING: [Synth 8-3331] design Processor has unconnected port Dout[5]
+WARNING: [Synth 8-3331] design Processor has unconnected port Dout[4]
+WARNING: [Synth 8-3331] design Processor has unconnected port Dout[3]
+WARNING: [Synth 8-3331] design Processor has unconnected port Dout[2]
+WARNING: [Synth 8-3331] design Processor has unconnected port Dout[1]
+WARNING: [Synth 8-3331] design Processor has unconnected port Dout[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 388.586 ; gain = 153.500
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 388.586 ; gain = 153.500
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:8]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK100MHZ]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'SW'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'md[0]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'md[1]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Clkout'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'r[0]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:156]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'r[1]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:157]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:157]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'r[2]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'r[3]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:159]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g[0]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:161]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:161]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g[1]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:162]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:162]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g[2]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g[3]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b[0]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:166]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b[1]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:167]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b[2]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:168]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:168]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b[3]'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hs'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:171]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:171]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vs'. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc:172]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 732.855 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "SR" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RDY" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 6     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 19    
+	   3 Input      8 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 13    
+	   3 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 28    
+	   3 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Processor 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module POC 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 13    
+	   3 Input      8 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 12    
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 21    
+	   3 Input      1 Bit        Muxes := 2     
+Module printer 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'U1/PD_reg[7:0]' into 'U1/BR_reg[7:0]' [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:145]
+WARNING: [Synth 8-6014] Unused sequential element U1/PD_reg was removed.  [C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v:145]
+INFO: [Synth 8-3886] merging instance 'U1/SR_reg[0]' (FDCP) to 'U2/flag_printer_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U1/Dout_reg[6]' (FD) to 'U1/Dout_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U1/Dout_reg[5]' (FD) to 'U1/Dout_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U1/Dout_reg[4]' (FD) to 'U1/Dout_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U1/Dout_reg[3]' (FD) to 'U1/Dout_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U1/Dout_reg[2]' (FD) to 'U1/Dout_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U1/Dout_reg[1]' (FD) to 'U1/Dout_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U1/Dout_reg[7] )
+INFO: [Synth 8-3886] merging instance 'U0/RW_reg[0]' (FDC) to 'U2/flag_printer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/RW_reg[1]' (FDC) to 'U2/flag_printer_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U2/flag_printer_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U2/flag_printer_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (U1/IRQ_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/IRQ_reg__1) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U2/RDY_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/TR_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/Dout_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/Dout_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U0/ADDR_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/flag_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/flag_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/SR_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/SR_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/SR_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/SR_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/SR_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/SR_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/SR_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U0/Din_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U0/Din_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U0/Din_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U0/Din_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U0/Din_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U0/Din_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U0/Din_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U0/Din_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/BR_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/BR_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/BR_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/BR_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/BR_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/BR_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/BR_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U1/BR_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U2/data_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U2/data_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U2/data_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U2/data_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U2/data_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U2/data_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U2/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U2/data_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U2/flag_printer_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U2/flag_printer_reg[1]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |     8|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     8|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 732.855 ; gain = 497.770
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 43 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 732.855 ; gain = 153.500
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 732.855 ; gain = 497.770
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 83 Warnings, 21 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 736.723 ; gain = 509.980
+INFO: [Common 17-1381] The checkpoint 'C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 736.723 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 21 13:57:02 2019...
