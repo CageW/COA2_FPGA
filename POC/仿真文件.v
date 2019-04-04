@@ -1,6 +1,5 @@
 `timescale 1ns / 1ps
 
-//需要将vga.v里的两个延时计数改为d5
 module test; //声明test名称
   reg CLK;
   reg func;

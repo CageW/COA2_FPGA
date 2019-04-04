@@ -7,3 +7,7 @@
 称之为直接寻址（Direct Addressing）。
 
 在一些少量的指令中，地址段就是操作数，这是立即数寻址（Immediate Addressing）。
+
+
+实现界面
+实现键盘输入指令
