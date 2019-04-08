@@ -7,7 +7,7 @@ module RAM (
 	);
 
 	reg [15:0] ram [7:0];
-
+	//  negedge
 	always @(posedge clk)
 	    if (C12) ram[address] <= data_input;//read
 	assign data_out = ram[address];
@@ -86,7 +86,7 @@ module PC(//PC寄存器用来跟踪程序中将要使用的指令
 	input C15,
 	output reg[7:0] pc
 	);
-	wire next_pc = pc + 8'b10;
+	wire next_pc = pc + 8'b01;
 	always @(posedge clk or posedge rst) begin
 		if (!rst) 
 			begin
@@ -156,12 +156,18 @@ module ACC(//ACC保存着ALU的另一个操作数，而且通常ACC存放着ALU�
 	input clk,
 	input rst,
 	input C9,
+	input C10,
 	input [15:0] ALU_result,
+	input [15:0] MBR_NUM,
 	output reg[15:0] ACC_NUM = 16'b0
 	);
 	always @(posedge clk or posedge rst) begin
 		if (!rst) 
 			begin
+				if(C10 == 1'b1)
+					begin 
+						ACC_NUM <= MBR_NUM;
+					end
 				if(C9 == 1'b1)
 					begin
 						ACC_NUM <= ALU_result;
@@ -173,6 +179,13 @@ module ACC(//ACC保存着ALU的另一个操作数，而且通常ACC存放着ALU�
 				ACC_NUM = 16'bx;
 			end
 	end
+	always @(C9) 
+		begin
+			if(C9 == 1'b1)
+				begin
+					ACC_NUM <= ALU_result;
+				end
+		end
 endmodule
 
 module ALU(
@@ -181,83 +194,13 @@ module ALU(
 	input [15:0] ACC_NUM,
 	input C14,
 	input [15:0] ALU_X,
-	input [7:0]fn,
+	input [10:0]fn,
 	output [15:0] ALU_result,
 
 	);
 	wire[15:0] x0 = C7 ? 16'b0 : ACC_NUM;//ACC
 	wire[15:0] y0 = C14 ? 16'b0 : ALU_X;//[X]
-	always @(fn) 
-		begin
-			case(fn)
-				8'b00000001://ACC->[X]
-					begin
-						
-					end
-				8'b00000010://[X]->ACC 
-					begin
-						ALU_result = y0;
-					end
-				8'b00000011://ACC+[X]->ACC 
-					begin
-						ALU_result = x0 + y0;
-					end
-				8'b00000100://ACC-[X]->ACC 
-					begin
-						ALU_result = x0 - y0;
-					end
-				8'b00000101://If ACC>=0 then X->PC  else PC+1->PC 
-					begin
-						
-					end
-				8'b00000110://X->PC 
-					begin
-						
-					end
-				8'b00000111://Halt a program 
-					begin
-						
-					end
-				8'b00001000://ACC*[X]->ACC, MR 
-					begin
-						ALU_result = x0*y0;
-					end
-				8'b00001001://ACC÷[X]->ACC, DR 
-					begin
-						ALU_result = x0/y0;
-					end
-				8'b00001010://ACC and [X]->ACC 
-					begin
-						ALU_result = x0 & y0;
-					end
-				8'b00001011://ACC or [X]->ACC 
-					begin
-						ALU_result = x0 | y0;
-					end
-				8'b00001100://NOT [X]->ACC 
-					begin
-						ALU_result = ~y0;
-					end
-				8'b00001101://SHIFT ACC to Right 1bit, Logic Shift 
-					begin
-						ALU_result = x0 << 1;
-					end
-				8'b00001110://SHIFT ACC to Left 1bit, Logic Shift 
-					begin
-						ALU_result = x0 >> 1;
-					end
-				8'b00001111://Not (ACC) -> ACC
-					begin
-						ALU_result = ~x0;
-					end
-				
-				default:
-					begin
-						
-					end
-			endcase
-		end
-	
+	assign ALU_result = fn[0]*y0 + fn[1]*(x0 + y0) + fn[2]*(x0 - y0) + fn[3]*(x0*y0) + fn[4]*(x0/y0) + fn[5]*(x0 & y0) + fn[6]*(x0 | y0) + fn[7]*(~y0) + fn[8]*(x0 << 1) + fn[9]*(x0 >> 1) + fn[10]*(~x0);
 endmodule
 
 

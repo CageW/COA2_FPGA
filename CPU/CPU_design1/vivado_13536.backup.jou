@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Apr  5 20:12:24 2019
+# Process ID: 13536
+# Current directory: C:/Users/Quzard/OneDrive/COA/COA2_FPGA/CPU/CPU_design1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1296 C:\Users\Quzard\OneDrive\COA\COA2_FPGA\CPU\CPU_design1\CPU_design1.xpr
+# Log file: C:/Users/Quzard/OneDrive/COA/COA2_FPGA/CPU/CPU_design1/vivado.log
+# Journal file: C:/Users/Quzard/OneDrive/COA/COA2_FPGA/CPU/CPU_design1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Quzard/OneDrive/COA/COA2_FPGA/CPU/CPU_design1/CPU_design1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/Quzard/OneDrive/COA/COA2_FPGA/CPU/CPU_design1/test_behav.wcfg
+source test.tcl
+add_wave {{/test/dut/U0/test_num}} 
+restart
+run all
+restart
+run 10 us
+save_wave_config {C:/Users/Quzard/OneDrive/COA/COA2_FPGA/CPU/CPU_design1/test_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Quzard/OneDrive/COA/COA2_FPGA/CPU/CPU_design1/test_behav.wcfg
+source test.tcl
+close_sim
