@@ -3,8 +3,7 @@ module top(
     input rst,
     output [15:0]Flag,
     output[7:0] seg_data_pin,
-    output[7:0] seg_cs_pin,
-    output rgb
+    output[7:0] seg_cs_pin
     );
   (*dont_touch = "true" *) wire [7:0]OPCODE;
   (*dont_touch = "true" *)  wire [15:0]C;
@@ -22,7 +21,7 @@ module top(
     
  (*dont_touch = "true" *)  wire[5:0] uMA_U0; 
   (*dont_touch = "true" *)  wire[7:0] OPCODE_U0;
-(*dont_touch = "true" *)  wire[7:0] cycle_U0;
+(*dont_touch = "true" *)  wire[3:0] cycle_U0;
     CU U0(
         .clk(CLK_50M),
         .rst(rst),

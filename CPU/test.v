@@ -16,13 +16,20 @@ initial begin
     forever #1 clk = ~clk;
     end
     initial 
-         begin
+         begin//此过程块指定刺激。
          rst = 1;
          #2
          rst = 0;
          #2
         rst = 1;
-
-        end
+        //   C1 = 0;
+        //   C2 = 0;
+        //   #200
+        //   C2 = 1;
+        //   C1 = 1;
+        //   #1
+        //   C1 = 0;
+        //   C2 = 0;
+         end
   
 endmodule

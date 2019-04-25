@@ -2,12 +2,14 @@ module CU(
     input clk,
     input rst,
     (*dont_touch = "true" *)input Flag  ,
-    (*dont_touch = "true" *)input [7:0]OPCODE_IN,
-    (*dont_touch = "true" *)output reg [15:0]C = 16'b0,
-    (*dont_touch = "true" *)output reg [10:0]fn = 11'b0,  
-    (*dont_touch = "true" *)output    reg[5:0] uMA =  6'b000_001, 
+   (*dont_touch = "true" *)input [7:0]OPCODE_IN,
+ (*dont_touch = "true" *)output reg [15:0]C = 16'b0,
+    (*dont_touch = "true" *)output reg [10:0]fn = 11'b0,
+    
+   (*dont_touch = "true" *)output    reg[5:0] uMA =  6'b000_001, 
     (*dont_touch = "true" *)output    reg[7:0] OPCODE = 0,
     (*dont_touch = "true" *)output    reg[3:0] cycle = 4'b0000
+    
     );
     parameter START = 6'b000_001;
     parameter Instr_fetch = 6'b000_010;
@@ -36,13 +38,13 @@ module CU(
 
     always @(posedge clk or negedge rst) begin
         if (~rst) 
-            begin
-                 C = 0;
-                 fn = 0;
-                 uMA =  START; 
-                 OPCODE = 0;
-                 cycle = 4'b0000;
-            end
+         begin
+         C = 0;
+         fn = 0;
+         uMA =  START; 
+         OPCODE = 0;
+         cycle = 4'b0000;
+         end
         else
             begin
                 case(uMA)
@@ -110,7 +112,7 @@ module CU(
                                         endcase                                       
                                     end
                                 X_TO_ACC:
-                                    begin
+                                    begin 
                                         cycle <= 4'b0100;
                                         case(cycle)
                                             4'b0100:
@@ -141,7 +143,7 @@ module CU(
                                         endcase                                                
                                     end
                                 ADD:
-                                    begin
+                                    begin 
                                         cycle <= 4'b1000;
                                         case(cycle)
                                             4'b1000:
@@ -181,7 +183,7 @@ module CU(
                                         endcase                                                
                                     end
                                 SUB:
-                                    begin
+                                    begin 
                                         cycle <= 4'b1000;
                                         case(cycle)
                                             8'b1000:
@@ -332,16 +334,17 @@ module CU(
                                                     C <= 13'b0000000000000;
                                                     C[7] <= 1;
                                                     C[14] <= 1;
+                                                   
                                                     cycle <= 4'b0011;
                                                     fn[4] <= 1;
                                                 end
                                             4'b0011:
-                                                begin
-                                                    C[9] <= 1;
-                                                    cycle <= 4'b0000;
-                                                    OPCODE <=NONE;
-                                                    uMA <= START;
-                                                end
+                                            begin
+                                             C[9] <= 1;
+                                            cycle <= 4'b0000;
+                                            OPCODE <=NONE;
+                                            uMA <= START;
+                                            end
                                             default:
                                                 begin 
 
@@ -487,7 +490,7 @@ module CU(
                                         endcase
                                     end
                                 SHIFT_LEFT:
-                                    begin 
+                                    begin
                                         cycle <= 4'b0001;
                                         case(cycle)
                                             4'b0001:

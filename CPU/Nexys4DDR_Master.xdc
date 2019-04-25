@@ -49,7 +49,7 @@ set_property -dict {PACKAGE_PIN V11 IOSTANDARD LVCMOS33} [get_ports {Flag[15]}]
 
 #set_property -dict { PACKAGE_PIN R12   IOSTANDARD LVCMOS33 } [get_ports { LED16_B }]; #IO_L5P_T0_D06_14 Sch=led16_b
 #set_property -dict { PACKAGE_PIN M16   IOSTANDARD LVCMOS33 } [get_ports { LED16_G }]; #IO_L10P_T1_D14_14 Sch=led16_g
-set_property -dict {PACKAGE_PIN N15 IOSTANDARD LVCMOS33} [get_ports rgb]
+#set_property -dict {PACKAGE_PIN N15 IOSTANDARD LVCMOS33} [get_ports rgb]
 #set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports { LED17_B }]; #IO_L15N_T2_DQS_ADV_B_15 Sch=led17_b
 #set_property -dict { PACKAGE_PIN R11   IOSTANDARD LVCMOS33 } [get_ports { LED17_G }]; #IO_0_14 Sch=led17_g
 #set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { LED17_R }]; #IO_L11N_T1_SRCC_14 Sch=led17_r
@@ -174,14 +174,14 @@ set_property -dict {PACKAGE_PIN C12 IOSTANDARD LVCMOS33} [get_ports rst]
 
 ##Micro SD Connector
 
-set_property -dict { PACKAGE_PIN E2    IOSTANDARD LVCMOS33 } [get_ports { SD_RESET }]; #IO_L14P_T2_SRCC_35 Sch=sd_reset
+#set_property -dict { PACKAGE_PIN E2    IOSTANDARD LVCMOS33 } [get_ports { SD_RESET }]; #IO_L14P_T2_SRCC_35 Sch=sd_reset
 #set_property -dict { PACKAGE_PIN A1    IOSTANDARD LVCMOS33 } [get_ports { SD_CD }]; #IO_L9N_T1_DQS_AD7N_35 Sch=sd_cd
-set_property -dict { PACKAGE_PIN B1    IOSTANDARD LVCMOS33 } [get_ports { sclk }]; #IO_L9P_T1_DQS_AD7P_35 Sch=sd_sck
-set_property -dict { PACKAGE_PIN C1    IOSTANDARD LVCMOS33 } [get_ports { mosi }]; #IO_L16N_T2_35 Sch=sd_cmd
-set_property -dict { PACKAGE_PIN C2    IOSTANDARD LVCMOS33 } [get_ports { miso }]; #IO_L16P_T2_35 Sch=sd_dat[0]
-set_property -dict { PACKAGE_PIN E1    IOSTANDARD LVCMOS33 } [get_ports { SD_DAT[1] }]; #IO_L18N_T2_35 Sch=sd_dat[1]
-set_property -dict { PACKAGE_PIN F1    IOSTANDARD LVCMOS33 } [get_ports { SD_DAT[2] }]; #IO_L18P_T2_35 Sch=sd_dat[2]
-set_property -dict { PACKAGE_PIN D2    IOSTANDARD LVCMOS33 } [get_ports {cs }]; #IO_L14N_T2_SRCC_35 Sch=sd_dat[3]
+#set_property -dict { PACKAGE_PIN B1    IOSTANDARD LVCMOS33 } [get_ports { SD_SCK }]; #IO_L9P_T1_DQS_AD7P_35 Sch=sd_sck
+#set_property -dict { PACKAGE_PIN C1    IOSTANDARD LVCMOS33 } [get_ports { SD_CMD }]; #IO_L16N_T2_35 Sch=sd_cmd
+#set_property -dict { PACKAGE_PIN C2    IOSTANDARD LVCMOS33 } [get_ports { SD_DAT[0] }]; #IO_L16P_T2_35 Sch=sd_dat[0]
+#set_property -dict { PACKAGE_PIN E1    IOSTANDARD LVCMOS33 } [get_ports { SD_DAT[1] }]; #IO_L18N_T2_35 Sch=sd_dat[1]
+#set_property -dict { PACKAGE_PIN F1    IOSTANDARD LVCMOS33 } [get_ports { SD_DAT[2] }]; #IO_L18P_T2_35 Sch=sd_dat[2]
+#set_property -dict { PACKAGE_PIN D2    IOSTANDARD LVCMOS33 } [get_ports { SD_DAT[3] }]; #IO_L14N_T2_SRCC_35 Sch=sd_dat[3]
 
 
 ##Accelerometer
@@ -258,13 +258,4 @@ set_property -dict { PACKAGE_PIN D2    IOSTANDARD LVCMOS33 } [get_ports {cs }]; 
 
 
 
-
-
-
-connect_debug_port u_ila_0/probe2 [get_nets [list {U9/ram[166]_36[0]} {U9/ram[166]_36[1]} {U9/ram[166]_36[2]} {U9/ram[166]_36[3]} {U9/ram[166]_36[4]} {U9/ram[166]_36[5]} {U9/ram[166]_36[6]} {U9/ram[166]_36[7]} {U9/ram[166]_36[8]} {U9/ram[166]_36[9]} {U9/ram[166]_36[10]} {U9/ram[166]_36[11]} {U9/ram[166]_36[12]} {U9/ram[166]_36[13]} {U9/ram[166]_36[14]} {U9/ram[166]_36[15]}]]
-connect_debug_port u_ila_0/probe3 [get_nets [list {U9/ram[165]_37[0]} {U9/ram[165]_37[1]} {U9/ram[165]_37[2]} {U9/ram[165]_37[3]} {U9/ram[165]_37[4]} {U9/ram[165]_37[5]} {U9/ram[165]_37[6]} {U9/ram[165]_37[7]} {U9/ram[165]_37[8]} {U9/ram[165]_37[9]} {U9/ram[165]_37[10]} {U9/ram[165]_37[11]} {U9/ram[165]_37[12]} {U9/ram[165]_37[13]} {U9/ram[165]_37[14]} {U9/ram[165]_37[15]}]]
-connect_debug_port u_ila_0/probe11 [get_nets [list {U9/ram[160][15]_C_i_3_n_0}]]
-connect_debug_port u_ila_0/probe12 [get_nets [list {U9/ram[162][15]_C_i_3_n_0}]]
-connect_debug_port u_ila_0/probe13 [get_nets [list {U9/ram[163][14]_P_i_3_n_0}]]
-connect_debug_port u_ila_0/probe14 [get_nets [list {U9/ram[165][15]_C_i_5_n_0}]]
 

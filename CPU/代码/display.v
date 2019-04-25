@@ -1,45 +1,45 @@
 module display(
     input clk,
     (*dont_touch = "true" *) input [15:0] ACC_NUM,
-    (*dont_touch = "true" *) input [15:0] MR,
-    (*dont_touch = "true" *) output[7:0] seg_data_pin,
-    (* dont_touch = "true" *) output[7:0] seg_cs_pin 
+    (*dont_touch = "true" *)    input [15:0] MR,
+    (*dont_touch = "true" *)    output[7:0] seg_data_pin,
+    (* dont_touch = "true" *)   output[7:0] seg_cs_pin 
     );
-    (*dont_touch = "true" *) wire [31:0] data;
+    (*dont_touch = "true" *)   wire [31:0] data;
     
-    (*dont_touch = "true" *) wire [31:0] t_buf = data[31] ? (~(data - 1'b1)) : data;
+    (*dont_touch = "true" *)    wire [31:0] t_buf = data[31] ? (~(data - 1'b1)) : data;
 
-    (*dont_touch = "true" *) wire tempfh = data[31];
-    (*dont_touch = "true" *) wire [30:0] tempzs = t_buf[30:0]; 
+    (*dont_touch = "true" *)    wire tempfh = data[31];
+    (*dont_touch = "true" *)   wire [30:0] tempzs = t_buf[30:0]; 
 
     assign data[15:0] = ACC_NUM;
     assign data[31:16] = MR;
 
 
-    (*dont_touch = "true" *) reg[7:0] select=8'b11111110;
-    (*dont_touch = "true" *) integer disnum;
-    (*dont_touch = "true" *) integer k;
+    (*dont_touch = "true" *)  reg[7:0] select=8'b11111110;
+    (*dont_touch = "true" *)   integer disnum;
+    (*dont_touch = "true" *)  integer k;
     
-    (*dont_touch = "true" *)    reg dp, cg, cf, ce, cd, cc, cb, ca;
+    (*dont_touch = "true" *)  reg dp, cg, cf, ce, cd, cc, cb, ca;
 
     assign seg_data_pin = {dp, cg, cf, ce, cd, cc, cb, ca};
 
     assign seg_cs_pin=select;
     
-    (*dont_touch = "true" *) reg  clk_5000hz=0;
-    (*dont_touch = "true" *) reg [20:0] clk_cnt = 0;
+ (*dont_touch = "true" *)   reg  clk_5000hz=0;
+ (*dont_touch = "true" *)   reg [20:0] clk_cnt = 0;
     
-    (*dont_touch = "true" *) reg [3:0] one;
-    (*dont_touch = "true" *) reg [3:0] two;
-    (*dont_touch = "true" *) reg [3:0] three;
-    (*dont_touch = "true" *) reg [3:0] four;
-    (*dont_touch = "true" *) reg [3:0] five;
-    (*dont_touch = "true" *) reg [3:0] six;
-    (*dont_touch = "true" *) reg [3:0] seven;
-    (*dont_touch = "true" *) reg [3:0] eight;
-    (*dont_touch = "true" *) reg [3:0] nine;
-    (*dont_touch = "true" *) reg [3:0] ten;
-    (*dont_touch = "true" *) integer i;
+(*dont_touch = "true" *)    reg [3:0] one;
+(*dont_touch = "true" *)   reg [3:0] two;
+ (*dont_touch = "true" *)   reg [3:0] three;
+  (*dont_touch = "true" *)  reg [3:0] four;
+  (*dont_touch = "true" *)  reg [3:0] five;
+  (*dont_touch = "true" *)  reg [3:0] six;
+  (*dont_touch = "true" *)  reg [3:0] seven;
+  (*dont_touch = "true" *)  reg [3:0] eight;
+  (*dont_touch = "true" *)  reg [3:0] nine;
+  (*dont_touch = "true" *)  reg [3:0] ten;
+ (*dont_touch = "true" *)   integer i;
     always @(negedge clk ) 
         begin
             one = 4'd0;
