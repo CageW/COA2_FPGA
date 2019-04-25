@@ -1,0 +1,5 @@
+设置多线程的命令为：  
+set_param general.maxThreads 8
+
+读取当前线程数的命令： 为
+get_param  general.maxThreads

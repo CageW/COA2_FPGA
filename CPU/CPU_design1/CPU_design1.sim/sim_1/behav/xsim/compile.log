@@ -1,7 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11918/OneDrive/COA/COA2_FPGA/CPU/CPU_design1/CPU_design1.srcs/sources_1/new/CPU.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module A
-INFO: [VRFC 10-311] analyzing module B
-INFO: [VRFC 10-311] analyzing module C
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11918/OneDrive/COA/COA2_FPGA/CPU/CPU_design1/CPU_design1.srcs/sim_1/new/test.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module test
