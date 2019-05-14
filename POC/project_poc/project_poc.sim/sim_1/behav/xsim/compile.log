@@ -1,7 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/main.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Processor
-INFO: [VRFC 10-311] analyzing module POC
-INFO: [VRFC 10-311] analyzing module printer
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11918/OneDrive/COA/COA2_FPGA/POC/project_poc/project_poc.ip_user_files/test.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module test
